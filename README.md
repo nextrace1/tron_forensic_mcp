@@ -54,7 +54,7 @@ This tool helps investigators trace cryptocurrency movements by:
 
 ## Sample Workflow
 
-1. **Reconnaissance** — Analyze target address: wallet type, transaction volume, known entity check
+1. **Reconnaissance** — Analyze target address: address type, transaction volume, known entity check
 2. **Funding Analysis** — Automated upstream and downstream gas tracing for attribution (Which address funded my target, and which addresses did my target fund?)
 3. **Flow Tracing** — Multi-hop USDT tracing with configurable depth and amount thresholds
 4. **Reporting** — Generate markdown report with exchange touchpoints and law enforcement recommendations
