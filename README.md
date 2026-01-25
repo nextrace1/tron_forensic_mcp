@@ -1,6 +1,6 @@
 # TRON Blockchain Forensics - MCP Server
 
-An AI-powered investigation tool for tracing USDT flows on the TRON network. Built using the Model Context Protocol (MCP) to enable natural language orchestration of complex forensic workflows.
+An AI-powered investigation tool for tracing USDT flows on the TRON network. Built using the Model Context Protocol (MCP) to enable natural language orchestration of complex forensic workflows. Code and demo available upon request.
 
 ## What It Does
 
