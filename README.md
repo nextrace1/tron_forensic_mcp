@@ -1,6 +1,6 @@
 # TRON Forensics MCP Server
 
-A Model Context Protocol (MCP) server providing blockchain forensic analysis tools for investigating TRON USDT transactions. Designed for use with Claude Desktop, Claude.ai, or any MCP-compatible client.
+A Model Context Protocol (MCP) server providing blockchain forensic analysis tools for investigating TRON USDT transactions. Designed for use with Claude Desktop, Claude.ai, or any MCP-compatible client. *Code and demo available upon request.* 
 
 ## Features
 
