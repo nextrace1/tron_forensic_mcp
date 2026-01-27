@@ -8,6 +8,7 @@ A Model Context Protocol (MCP) server providing blockchain forensic analysis too
 - **Funding Chain Tracing** - Discover who funded an address and what addresses it funded
 - **Multi-hop Transaction Flow** - Trace USDT movements upstream and downstream across multiple hops
 - **Exchange Touchpoint Detection** - Identify where funds touched regulated entities
+- **Timezone Activity Analysis** - Identify likely/unlikely user timezones based on transaction timing patterns
 - **Report Generation** - Markdown reports, Excel workbooks, and flow diagrams
 - **Cloud Storage** - Automatic upload to Cloudflare R2 for downloadable reports (when configured)
 
@@ -59,6 +60,7 @@ A Model Context Protocol (MCP) server providing blockchain forensic analysis too
 | `get_account_summary` | Initial analysis of an address |
 | `get_activation_funding` | Find who funded the address |
 | `get_funded_accounts` | Find accounts this address funded |
+| `analyze_activity_timezone` | Identify likely/unlikely user timezones from transaction timing |
 
 ### Transaction Tracing
 | Tool | Purpose |
@@ -154,7 +156,8 @@ Typical workflow:
 3. `get_funded_accounts` - Find child addresses
 4. `analyze_transaction_flow` - Multi-hop tracing
 5. `enhance_with_counterparty_funding` - Expand exchange touchpoints
-6. `generate_all_investigation_reports` - Create downloadable reports
+6. `analyze_activity_timezone` - Identify likely user timezone (optional, requires 100+ outbound transfers)
+7. `generate_all_investigation_reports` - Create downloadable reports
 
 ## File Structure
 
@@ -182,3 +185,4 @@ tron_forensics_mcp/
 ## License
 
 MIT
+
