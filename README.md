@@ -182,6 +182,25 @@ tron_forensics_mcp/
 - Parameter caps to prevent resource exhaustion
 - Non-root container execution
 
+## Troubleshooting
+
+### "MCP error - 32602: Invalid request parameters" or "Received request before initialization was complete"
+
+This error occurs when the MCP client fails to complete the initialization handshake with the server. This is a client-side issue, not a server problem.
+
+**To fix:**
+1. **Restart your MCP client** - In Claude.ai, refresh the page or disconnect/reconnect the MCP integration
+2. **Hard refresh** - Use Ctrl+Shift+R (Windows/Linux) or Cmd+Shift+R (Mac)
+3. **Try incognito mode** - Rule out browser cache/extension issues
+4. **Check your connection** - Unstable networks can cause the SSE connection to drop mid-handshake
+
+**Why this happens:**
+The MCP protocol requires a handshake sequence before tool calls can be made. If your client's connection drops and reconnects, it gets a new session ID but may try to skip the handshake. The server correctly rejects these requests.
+
+### "405 Method Not Allowed" on /sse endpoint
+
+This is normal and harmless. Some MCP clients probe with POST before using GET. The server correctly rejects POST and the client retries with GET.
+
 ## License
 
 MIT
